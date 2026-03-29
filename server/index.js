@@ -6,8 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("server success");
+app.get("/api/test", (req, res) => {
+  res.json('서버 연결 성공!');
 });
 
 app.listen(5000, () => {

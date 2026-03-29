@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import BottomNav from './components/BottomNav';
 import MapPage from './pages/MapPage';
 import TownPage from './pages/TownPage';
 import ChatPage from './pages/ChatPage';
 import MyPage from './pages/MyPage';
+import axios from 'axios';
 
 function App() {
+  // 서버 연결 테스트
+  useEffect(()=>{
+    axios.get('/api/test')
+      .then(res=>console.log(res.data))
+      .catch(err=>console.error(err))
+  }, []);
+
   const [activeTab, setActiveTab] = useState('map'); 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
