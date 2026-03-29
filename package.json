@@ -1,0 +1,26 @@
+{
+  "name": "walk_the_dog",
+  "version": "1.0.0",
+  "description": "산책하개",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2026-capstone-team25/walk-the-dog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2026-capstone-team25/walk-the-dog/issues"
+  },
+  "homepage": "https://github.com/2026-capstone-team25/walk-the-dog#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
